@@ -1,12 +1,13 @@
 <?php
-
 namespace App\Controllers;
+use Src\Classes\ConfigView;
 
 class HomeController{
 
     public function __construct()
     {
-            echo "Aqui é home controller"; 
+        $view = new ConfigView("Home");
+        $view->chargeView();            
     }
 
 }
