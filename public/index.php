@@ -1,19 +1,6 @@
 <?php 
 
 include_once "../Src/vendor/autoload.php";
+include_once "../config/Config.php";
 
-use Src\Traits\TraitParseUrl;
-
-class teste {
-
-    use TraitParseUrl;
-
-    public function __construct()
-    {
-        $testar = $this->parseUrl();
-        var_dump($testar);
-    }
-
-}
-
-$new = new teste();
+$rout = new \App\Dispatch;
