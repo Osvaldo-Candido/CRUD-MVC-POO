@@ -19,7 +19,7 @@ class Dispatch extends Routes {
         $this::addController();
     } 
 
-    public function addController()
+    private function addController()
     {
         $classController = "\\App\\Controllers\\".$this->getUrl();
         $this->object = new $classController;
@@ -35,7 +35,7 @@ class Dispatch extends Routes {
         }
     }
 
-    public function addParamters()
+    private function addParamters()
     {
         $paraCount = count($this->parseUrl());
         if($paraCount > 2)

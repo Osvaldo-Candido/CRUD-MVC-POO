@@ -12,7 +12,7 @@ class Conexao {
         ];
 
         try {
-            $conexao = new \PDO("mysql:host=".HOST."; dbname=".DATABASE."","".USER."","".PASSWORD);
+            $conexao = new \PDO("mysql:host=".HOST."; dbname=".DATABASE."","".USER."","".PASSWORD,$opcoes);
             return $conexao;
         } catch (\PDOException $th) {
            print "ERRO = ".$th->getMessage();

@@ -7,10 +7,10 @@ class ConfigView{
     private $view;
     private $data = [];
 
-    public function __construct($view, $data = null)
+    public function __construct($view, array $data = null)
     {
             $this->view = $view;
-            $this->$data = $data;
+            $this->data = $data;
     } 
 
     public function chargeView()
