@@ -7,7 +7,7 @@ class Dispatch extends Routes {
 
     use TraitParseUrl;
     private $object;
-    private $method;
+    private $method = "index";
     private $parameters = [];
 
 
@@ -32,6 +32,8 @@ class Dispatch extends Routes {
                     $this->addParamters();
                     call_user_func_array([$this->object, $this->method], $this->getParam());
             }
+        }else {
+                    call_user_func_array([$this->object, $this->method], $this->parameters);
         }
     }
 

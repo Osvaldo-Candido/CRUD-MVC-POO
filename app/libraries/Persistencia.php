@@ -29,7 +29,7 @@ class Persistencia extends Conexao {
                 }
             }
 
-            return $this->bindParam->bindValue($parameter,$value,$type);
+           $this->bindParam->bindValue($parameter,$value,$type);
 
     }
 

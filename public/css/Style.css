@@ -1,0 +1,153 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+/*ESTERLIZAÇÃO SÓ DO CABEÇALHO*/
+.menu h1 {
+    color: #000;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.menu ul {
+    display: flex;
+    background-color: #fafbfc;
+    padding: 20px;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+.menu li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.menu li:hover{
+    background: rgba(0, 0, 0, .1);;
+}
+
+.menu li + li {
+    margin-left: 20px;
+}
+/*ESTERLIZANDO O QUADRO DE IDEIAS*/
+
+
+.add-ideia a {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: #fff;
+}
+.add-ideia {
+    background-color: #008A00;
+    border-radius: 6px;
+    padding: 10px;
+    margin-left: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.tabela {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: .9em;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+.quadro-de-ideias h3 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    padding: 30px;
+    margin-top: 30px;
+}
+.tabela thead tr {
+    background: #005188;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tabela th, .tabela td{
+    padding: 12px 15px;
+} 
+
+.tabela tbody tr {
+    border-bottom: 1px solid #dddddd;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tabela tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.tabela tbody tr:last-of-type {
+    border-bottom: 2px solid #005188;
+}
+/*TELA DE CADASTRO*/
+
+
+.cadastro input, .cadastro label{
+    display: block;
+    width: 100%;
+} 
+.cadastro input {
+    border: none;
+}
+.cadastro input:focus {
+    outline: none;
+}
+.cadastro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background: #fafbfc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 25px;
+}
+.full-box {
+    flex: 1 1 100%;
+    position: relative;
+}
+.cadastro label {
+    font-size: .8rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.cadastro input {
+    font-size: .9rem;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 3px solid #323232;
+    margin-bottom: 30px;
+    background: #fafbfc;
+}
+.cadastro input:focus{
+    border-bottom: 3px solid #008A00;;
+}
+.cadastro input[type="submit"]{
+    border-bottom: none;
+    background: #039578;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 7px;
+}
+.cadastro input[type="submit"]:hover{
+    cursor: pointer;
+    background: #19778D;
+}
+textarea {
+    border-radius: 8px;
+}
+textarea:focus {
+    border: 3px solid #E60084;
+}

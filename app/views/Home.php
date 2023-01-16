@@ -1,8 +1,9 @@
 
     
-<div>
+<div class="quadro-de-ideias">
     <h3>Ideias de como tornar o mundo um lugar melhor</h3>
-    <table>
+    <table class="tabela">
+
         <thead>
             <tr>
              <td>ID</td>
@@ -29,6 +30,11 @@
              <td><?= $data->ideia ?></td>
              <td><?= $data->data_inscricao ?></td>
              <td><?= $data->data_modif ?></td>
+             <td>
+                <a href="#"><i class="fa-solid fa-trash"></i></a>
+                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+            </td>
+             
             </tr>
         <?php } ?>
         </tbody>

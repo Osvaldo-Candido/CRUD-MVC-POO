@@ -1,6 +1,6 @@
 <?php
 
-use App\Libraries\Conexao;
+ob_start();
 
 include_once "../Src/vendor/autoload.php";
 include_once "../config/Config.php";
