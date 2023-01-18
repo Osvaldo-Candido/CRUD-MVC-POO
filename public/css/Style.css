@@ -19,14 +19,24 @@
 }
 
 .menu li {
+    background: #24292F;
     list-style: none;
-    padding: 10px;
     cursor: pointer;
     transition: .5s ease-in-out;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+  
 }
 
 .menu li:hover{
-    background: rgba(0, 0, 0, .1);;
+    background: rgba(0, 0, 0, .1);
+    color: #000;
 }
 
 .menu li + li {
@@ -41,12 +51,16 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
     color: #fff;
+ 
 }
 .add-ideia {
+    position:absolute;
+    width:250px;
     background-color: #008A00;
     border-radius: 6px;
     padding: 10px;
-    margin-left: 100px;
+    left: 0;
+    right: 0;
     font-family: 'Courier New', Courier, monospace;
 }
 .tabela {
@@ -57,6 +71,9 @@
     margin: 0 auto;
     padding: 40px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+.quadro-de-ideias {
+    position:relative;
 }
 .quadro-de-ideias h3 {
     text-align: center;
@@ -87,6 +104,28 @@
 }
 .tabela tbody tr:last-of-type {
     border-bottom: 2px solid #005188;
+}
+.butons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.butons form + form {
+    margin-left: 10px;
+}
+button {
+    border:none;
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    border-radius: 4px;
+    padding: 6px;
+}
+.btn-edit {
+    background: #005188;
+}
+.btn-elim{
+    background: #E04343;
 }
 /*TELA DE CADASTRO*/
 

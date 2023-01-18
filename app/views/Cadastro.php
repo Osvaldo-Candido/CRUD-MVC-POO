@@ -23,7 +23,7 @@
     </div>
     <div class="full-box">
         <label class="lb" for="email">Email</label>
-        <input class="inp-l" type="text" name="email" placeholder="Insira o seu email" value="<?php if(isset($this->data['email'])){ echo $this->data['email']; } ?>">
+        <input class="inp-l" type="email" name="email" placeholder="Insira o seu email" value="<?php if(isset($this->data['email'])){ echo $this->data['email']; } ?>">
     </div>
     <div class="full-box">
         <label class="lb" for="nome">Como melhorar o mundo</label>

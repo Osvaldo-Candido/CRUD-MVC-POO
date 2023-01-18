@@ -30,14 +30,14 @@
              <td><?= $data->ideia ?></td>
              <td><?= $data->data_inscricao ?></td>
              <td><?= $data->data_modif ?></td>
-             <td>
+             <td class="butons">
                 <form action="<?=DIRPAGE."home/editForm"?>" method="post">
                     <input type="hidden" name="id" value="<?= $data->id ?>">
-                    <button type="submit">Editar</button>    
+                    <button class="btn-edit" type="submit">Editar</button>    
                 </form>
                 <form action="<?=DIRPAGE."home/delete"?>" method="post">
                     <input type="hidden" name="id" value="<?= $data->id ?>">
-                    <button type="submit"><i class="fa-solid fa-pen-to-square"></i>Eliminar</a></i></button>    
+                    <button class="btn-elim" type="submit">Eliminar</a></button>    
                 </form>
                 
             </td>
