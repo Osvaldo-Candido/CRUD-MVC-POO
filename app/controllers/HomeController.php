@@ -13,18 +13,16 @@ class HomeController extends Users {
     {
   
             $dados = $this->selectUsers();
-            $view = new ConfigView("Home", $dados);
-            $view->chargeView();   
+            $view = new ConfigView();
+            $view->chargeView("Home", $dados);   
         
          
     }
 
     public function viewCadastrar()
     {
-        
-        $dados = $this->selectUsers();
-        $view = new ConfigView("Cadastro");
-        $view->chargeView();
+        $view = new ConfigView();
+        $view->chargeView("Cadastro");
     }
 
     public function dataForm()
@@ -41,25 +39,58 @@ class HomeController extends Users {
                 'email' => trim($formulario['email']),
                 'ideia' => trim($formulario['ideia'])
             ];
+
+            $id = $_POST['id'];
             if(in_array("",$dados)){
 
                     $_SESSION['msg_erro'] = "Preencha o campo vazio";
-                    $view = new ConfigView("Cadastro",$dados);
-                    $view->chargeView();
+                    $view = new ConfigView();
+                    $view->chargeView("Cadastro",$dados);
 
                 } else {
-            
-                    $this->insertIdea($dados['nome'],$dados['pais'],$dados['cidade'],$dados['nascimento'], $dados['ideia'], $dados['email']);
+                    if($id != ""){
+                       
+                        $this->editUser($formulario['id'], $dados['nome'],$dados['pais'],$dados['cidade'],$dados['nascimento'], $dados['ideia'], $dados['email']);
+                        
+                        if($this->getResultado())
+                        {
+                            header("Location: ".DIRPAGE."home\index");
+                        }
+                    }else{
                     
-                    if($this->getResultado())
-                    {
-                        header("Location: ".DIRPAGE."home\index");
+                        $this->insertIdea($dados['nome'],$dados['pais'],$dados['cidade'],$dados['nascimento'], $dados['ideia'], $dados['email']);
+                        
+                        if($this->getResultado())
+                        {
+                            header("Location: ".DIRPAGE."home\index");
+                        }
                     }
                 }
       }
 
-
-
-      
    }
+
+   public function editForm()
+   {
+        if(isset($_POST['id']))
+        { $id = $_POST['id']; }
+
+        $dados =  $this->selectEdit($id);
+        var_dump($dados);
+        $view = new ConfigView();
+        $view->chargeView("Cadastro",$dados); 
+    }
+
+    public function delete()
+    {
+        if(isset($_POST['id']))
+        { $id = $_POST['id']; }
+
+        $this->deleteUsers($id);
+
+        if($this->getResultado())
+        {
+            header("Location: ".DIRPAGE."home\index");
+        }
+    }
 }

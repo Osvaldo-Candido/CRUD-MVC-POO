@@ -41,7 +41,7 @@ class Persistencia extends Conexao {
     public function result()
     {
         $this->execute();
-        return $this->bindParam->fetch(\PDO::FETCH_OBJ);
+        return $this->bindParam->fetch(\PDO::FETCH_ASSOC);
     }
 
     public function results()

@@ -7,14 +7,12 @@ class ConfigView{
     private $view;
     private $data = [];
 
-    public function __construct($view, array $data = null)
-    {
-            $this->view = $view;
-            $this->data = $data;
-    } 
 
-    public function chargeView()
+    public function chargeView($view, $data = null)
     {
+        $this->view = $view;
+        $this->data = $data;
+
         $file_view = DIRREQ."App\\Views\\".$this->view.".php";
 
         if(file_exists($file_view))

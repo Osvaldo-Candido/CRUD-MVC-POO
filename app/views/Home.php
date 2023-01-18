@@ -31,8 +31,15 @@
              <td><?= $data->data_inscricao ?></td>
              <td><?= $data->data_modif ?></td>
              <td>
-                <a href="#"><i class="fa-solid fa-trash"></i></a>
-                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                <form action="<?=DIRPAGE."home/editForm"?>" method="post">
+                    <input type="hidden" name="id" value="<?= $data->id ?>">
+                    <button type="submit">Editar</button>    
+                </form>
+                <form action="<?=DIRPAGE."home/delete"?>" method="post">
+                    <input type="hidden" name="id" value="<?= $data->id ?>">
+                    <button type="submit"><i class="fa-solid fa-pen-to-square"></i>Eliminar</a></i></button>    
+                </form>
+                
             </td>
              
             </tr>

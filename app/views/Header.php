@@ -18,7 +18,7 @@
                 <li><i class="fa-brands fa-twitter"></i></li>
                 <li><i class="fa-brands fa-instagram"></i></li>
                 <li><i class="fa-brands fa-whatsapp"></i></li>
-                <li><i class="fa-brands fa-github"></i></li>
+                <li><a href="https://github.com/Osvaldo-Candido"><i class="fa-brands fa-github"></i></a></li>
                 <li class="add-ideia"><a href="<?=DIRPAGE.'home\viewCadastrar'?>"><i style="color: yellow ;" class="fa-solid fa-lightbulb"></i>Nos dé a sua ideia</a></li>
             </ul>
         </nav>

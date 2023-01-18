@@ -140,6 +140,7 @@
     color: #fff;
     font-size: 1.2em;
     border-radius: 7px;
+    width: 450px;
 }
 .cadastro input[type="submit"]:hover{
     cursor: pointer;

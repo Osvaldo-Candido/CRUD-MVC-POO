@@ -3,9 +3,6 @@
                 <?php echo $_SESSION['msg_erro'];  ?>
 <?php } ?>
     <div class="full-box">
-        <input class="inp-l" type="hidden" name="id"  value="<?php if(isset($this->data['id'])){ echo $this->data['id']; } ?>">
-    </div>
-    <div class="full-box">
         <label class="lb" for="nome">Nome</label>
         <input class="inp-l" type="text" name="nome" placeholder="Insira o seu nome" value="<?php if(isset($this->data['nome'])){ echo $this->data['nome']; } ?>">
     </div>
@@ -27,7 +24,7 @@
     </div>
     <div class="full-box">
         <label class="lb" for="nome">Como melhorar o mundo</label>
-       <textarea name="ideia" id="" cols="55" rows="8" value=""><?php if(isset($this->data['ideia'])){ echo $this->data['ideia']; } ?></textarea>
+       <textarea name="ideia" id="" cols="55" rows="8" value="<?php if(isset($this->data['ideia'])){ echo $this->data['ideia']; } ?>"></textarea>
     </div>
     <div cílass="full-box">
         <input class="inp-l" type="submit" value="Enviar">
